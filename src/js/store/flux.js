@@ -22,6 +22,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 					const store = getStore();
 					setStore({...store, Vehicles_info: data})
 			},
+			setCharacters : (data) => {
+				const store = getStore();
+				setStore({...store, Characters: data})
+			},
+			setPlanets : (data) => {
+				const store = getStore();
+				setStore({...store, Planets : data})
+			},
+			setVehicles : (data) => {
+				const store = getStore();
+				setStore({...store, Vehicles : data})
+			},
 			
 		}
 	};

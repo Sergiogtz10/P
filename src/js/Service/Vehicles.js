@@ -7,5 +7,5 @@ export const getVehicles = () => {
 
 export const getVehicle = (id) => {
 	const url = URL + "/starships"
-	return fetch(`${url}/${3}`);
+	return fetch(`${url}/${id}`);
 }

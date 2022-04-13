@@ -10,9 +10,7 @@ const Navbar = () => {
 				<img src={StarWars} alt="Logo Star Wars" id="imageStar"/>
 			</Link>
 			<div id="button-favourites" className="ml-auto">
-				<Link to="/demo">
-					<button className="btn btn-warning">Favourites</button>
-				</Link>
+				<button className="btn btn-warning">Favourites</button>
 			</div>
 		</nav>
 	);

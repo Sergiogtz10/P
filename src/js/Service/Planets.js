@@ -7,5 +7,5 @@ export const getPlanets = () => {
 
 export const getPlanet = (id) => {
 	const url = URL + "/planets"
-	return fetch(`${url}/${1}`);
+	return fetch(`${url}/${id}`);
 }
