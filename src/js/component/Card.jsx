@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Context } from "../store/appContext.js";
 import { Link } from "react-router-dom";
 import propTypes from "prop-types";
 import "../../styles/index.css"
 
-
 const Card = (props) =>{
+
+const { actions } = useContext(Context);
 
 return(
 <div className="card text-black me-5 mb-3 " style={{"width": "18rem"}}>
@@ -15,9 +17,13 @@ return(
     <Link to={`/${props.type}/info/${props.id}`}>
       <button className="btn btn-warning">Learn more!</button>
     </Link>
+    <div className="ms-3">
+    <button className="btn btn-warning" onClick={()=> actions.appendFavorites(props.name)}>Like</button>
+    </div>
   </div>
 </div>
 )};
+
 Card.propTypes = {
   id: propTypes.number,
   type: propTypes.string,
