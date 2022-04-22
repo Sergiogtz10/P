@@ -40,14 +40,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({...store, Favorites:[...store.Favorites, thing]});
 			},
 	
-			deleteFavorites(thing){
+			deleteFavorites: (name) => {
 				const store = getStore();
-				const favs = store.favorites.filter((fav)=>fav!=thing)
+				const data = store.Favorites.filter((favs)=>favs!=name)
 				store.Favorites=[];
-				favs.map((favourite)=>{
-					setStore({...store,Favorites:[...store.Favorites,favourite]});
+				data.map((favorite)=>{
+					setStore({...store,Favorites:[...store.Favorites,favorite]});
 				})
-				
 			},
 		
 		}

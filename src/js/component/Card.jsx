@@ -17,8 +17,8 @@ return(
     <Link to={`/${props.type}/info/${props.id}`}>
       <button className="btn btn-warning">Learn more!</button>
     </Link>
-    <div className="ms-3">
-    <button className="btn btn-warning" onClick={()=> actions.appendFavorites(props.name)}>Like</button>
+    <div id="marg">
+    <button className="btn btn-danger" onClick={()=> actions.appendFavorites(props.name)}>Like</button>
     </div>
   </div>
 </div>
